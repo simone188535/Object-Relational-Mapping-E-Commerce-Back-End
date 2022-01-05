@@ -36,11 +36,11 @@
   This DB is not hosted. To use this app make sure to import the schema and seed data from the db folder.  If you have MySQL installed, run ```mysql -u root```. While in the mySQL shell, run ```source db/schema.sql ``` and then ```exit```. After this, run ``` npm i ```,``` npm seed ``` and ``` npm start ```.
 
 ## Visuals
-  ![Object Relational Mapping E-Commerce Back End](./assets/thumbnail.png)
+  ![Object Relational Mapping E-Commerce Back End](./assets/e-commerce.png)
 
 ## Deployed Links
 
-* [Demo Video](https://watch.screencastify.com/v/dcQ1KhXF4Fc0IHcxTWJd)
+* [Demo Video](https://watch.screencastify.com/v/f7LVUXWYmQbn6hXOrmiu)
 
 * [The URL of the GitHub repository.](https://github.com/simone188535/Object-Relational-Mapping-E-Commerce-Back-End)
   ## Questions
