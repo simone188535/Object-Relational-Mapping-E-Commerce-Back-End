@@ -1,7 +1,7 @@
 # Object Relational Mapping E-Commerce Back End
 
   ## Description
-  This application creates a mock E-Commerce Back End that has contains tags, categories and products. It also utilizes CRUD operations, One to Many relations and Many to Many relations. This application uses node, MySQL, Sequelize and express.
+  This application creates a mock E-Commerce Back End that has contains tags, categories and products. It also utilizes CRUD operations, One to Many relations and Many to Many relations. This application uses Node, MySQL, Sequelize and Express.
 
   ## Table of Contents
 
@@ -19,6 +19,7 @@
   ## Installation
 
   To install necessary dependencies, run the following commands:
+
   ```mysql -u root```
 
   ```source db/schema.sql```
