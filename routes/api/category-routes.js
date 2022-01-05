@@ -21,12 +21,11 @@ router.get("/:id", async (req, res) => {
     // find one category by its `id` value
     // be sure to include its associated Products
     const { id } = req.params;
-    const user = await Category.findOne({ where: { id }, include: Product });
-    if (user) {
-    return res.status(200).json(user);
+    const category = await Category.findOne({ where: { id }, include: Product });
+    if (category) {
+    return res.status(200).json(category);
     }
-    return res.status(404).json({message: 'This User not found'});
-
+    return res.status(404).json({message: 'This category was not found'});
   } catch (err) {
     res.status(400).json(err);
   }
@@ -34,16 +33,13 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const { id } = req.params;
     const { categoryName } = req.body;
     // create a new category
-    const newCategory = await Category.update({
+    const newCategory = await Category.create({
       category_name: categoryName,
-    },
-    {
-      where: { id }
     });
-    return res.status(201).json(newCategory);
+    
+    res.status(201).json(newCategory);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -60,7 +56,8 @@ router.put("/:id", async (req, res) => {
     {
       where: { id }
     });
-    return res.status(201).json(updatedCategory);
+    
+    res.status(201).json(updatedCategory);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -76,7 +73,7 @@ router.delete("/:id", async (req, res) => {
       },
     });
 
-    return res.status(204).json(deleteCategory);
+    res.status(204).json(deleteCategory);
   } catch (err) {
     res.status(400).json(err);
   }
