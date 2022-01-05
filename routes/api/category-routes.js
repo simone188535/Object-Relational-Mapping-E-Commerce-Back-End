@@ -7,7 +7,9 @@ router.get('/', async (req, res) => {
   try {
   // find all categories
   // be sure to include its associated Products
-  const allCategories = await Category.findAll({});
+  const allCategories = await Category.findAll({
+    include: Product
+  });
   res.json(allCategories);
   } catch (err) {
   res.status(400).json(err);
