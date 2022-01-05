@@ -65,10 +65,10 @@ router.put("/:id", async (req, res) => {
 });
 
 router.delete("/:id", async (req, res) => {
-  // delete on tag by its `id` value
   try {
+    // delete on tag by its `id` value
     const { id } = req.params;
-    // delete a category by its `id` value
+    
     const deleteTag = await Tag.destroy({
       where: {
         id,
